@@ -11,7 +11,6 @@ const Pokemon = () => {
   const [showAbilities, setShowAbilities] = useState(false);
   const { name } = useParams();
   const navigate = useNavigate();
-  console.log(showMoves);
   const toggleMoves = () => {
     setShowMoves((current) => !current);
   };
@@ -21,7 +20,6 @@ const Pokemon = () => {
   useEffect(() => {
     const getPokemonDetails = async () => {
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-      console.log(res.data);
       setPokemon(res.data);
     };
 

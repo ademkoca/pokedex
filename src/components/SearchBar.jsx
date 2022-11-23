@@ -8,14 +8,13 @@ const SearchBar = ({ setSearchResult, searchResult, setNoResults }) => {
     const res = await axios.get(
       'https://pokeapi.co/api/v2/pokemon/?limit=1300'
     );
-    
 
     setSearchResult(
       res.data.results.filter((p) =>
         p.name.toLowerCase().includes(query.toLowerCase())
       )
     );
-    console.log(searchResult);
+
     if (searchResult.length === 0) {
       setNoResults(true);
     }

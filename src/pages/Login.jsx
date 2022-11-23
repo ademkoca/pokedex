@@ -15,8 +15,6 @@ const Login = () => {
     repeatPassword: '',
     termsCheckBox: false,
   });
-  console.log('Step: ' + step);
-  console.log('User: ' + user.termsCheckBox);
   const loginUser = useUserStore((state) => state.login);
   const handleStep1 = (e) => {
     e.preventDefault();

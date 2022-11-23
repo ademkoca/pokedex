@@ -19,7 +19,6 @@ const Pagination = ({
   for (let i = 1; i <= Math.ceil(data.length / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-
   if (!visible) {
     return null;
   }
@@ -84,7 +83,7 @@ const Pagination = ({
                 href="#"
                 aria-current="page"
                 className={`${
-                  p === currentPage ? 'bg-[#F3666D]' : 'bg-red-50'
+                  p == currentPage ? 'bg-[#F3666D]' : 'bg-red-50'
                 } relative z-10 inline-flex items-center border border-[#ED1A25] px-4 py-2 text-sm font-medium text-red-600 focus:z-20`}
               >
                 {p}
