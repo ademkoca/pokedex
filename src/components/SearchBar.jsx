@@ -21,7 +21,7 @@ const SearchBar = ({ setSearchResult, searchResult, setNoResults }) => {
   };
   const handleSearch = (e) => {
     e.preventDefault();
-    getSearchResult(searchQuery);
+    if (searchQuery !== '') getSearchResult(searchQuery);
   };
   return (
     <form className="flex items-center mb-3">
