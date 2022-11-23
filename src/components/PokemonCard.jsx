@@ -2,11 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PokemonCard = ({ p, idx, offset, url }) => {
-  //   const id = url.substring(-5, -1);
-  //   console.log(id);
   const id = p.url.split('/')[6];
-  //   console.log(idx < 906);
-  //   console.log(offset);
   return (
     <Link to={`/pokemon/${p.name}`} key={idx} href="#" className="group">
       <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 ">

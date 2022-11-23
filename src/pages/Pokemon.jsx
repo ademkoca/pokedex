@@ -31,26 +31,6 @@ const Pokemon = () => {
     return <Navigate to="/login" replace />;
   }
   return (
-    // <div>
-    //   <img
-    //     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
-    //   />
-    //   <h1>Name: {pokemon.name}</h1>
-    //   <p>Abilities: </p>
-    //   <ul>
-    //     {pokemon.abilities?.map((a) => (
-    //       <li key={a.ability.name}>{a.ability.name}</li>
-    //     ))}
-    //   </ul>
-    //   <p>Height: {pokemon.height}</p>
-    //   <p>Weight: {pokemon.weight}</p>
-    //   <p>Top 3 moves: </p>
-    //   <ul>
-    //     {pokemon.moves?.slice(0, 3).map((m) => (
-    //       <li key={m.move.name}>{m.move.name}</li>
-    //     ))}
-    //   </ul>
-    // </div>
     <div className="p-16">
       <div className="p-8 bg-white shadow">
         <div className="w-[100vw] block mb-12">
@@ -90,12 +70,6 @@ const Pokemon = () => {
             </div>
           </div>
           <div className="space-x-8 flex justify-evenly mt-32 md:mt-0 md:justify-evenly text-center">
-            {/* <button className="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-              Connect
-            </button>
-            <button className="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-              Message
-            </button> */}
             <div>
               <p className="font-bold text-gray-700 text-xl">
                 {pokemon.abilities?.length}
@@ -117,11 +91,6 @@ const Pokemon = () => {
               {pokemon.base_experience}
             </span>
           </h1>
-          {/* <p className="font-light text-gray-600 mt-3">Bucharest, Romania</p> */}
-          {/* <p className="mt-8 text-gray-500">
-            Solution Manager - Creative Tim Officer
-          </p>
-          <p className="mt-2 text-gray-500">University of Computer Science</p> */}
         </div>
         <div className="mt-12 flex flex-col justify-center md:flex-row">
           <div className="flex flex-col justify-center">

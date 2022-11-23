@@ -19,10 +19,6 @@ const Pagination = ({
   for (let i = 1; i <= Math.ceil(data.length / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-  // console.log(pageNumbers);
-
-  // console.log(pages);
-  // console.log(data.length);
 
   if (!visible) {
     return null;
@@ -66,7 +62,7 @@ const Pagination = ({
               className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
             >
               <span className="sr-only">Previous</span>
-              {/*<!-- Heroicon name: mini/chevron-left -->*/}
+
               <svg
                 className="h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,15 +77,15 @@ const Pagination = ({
                 />
               </svg>
             </button>
-            {/*<!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->*/}
-
             {pageNumbers.map((p) => (
               <button
                 key={p}
                 onClick={() => paginate(p)}
                 href="#"
                 aria-current="page"
-                className="relative z-10 inline-flex items-center border border-[#ED1A25] bg-red-50 px-4 py-2 text-sm font-medium text-red-600 focus:z-20"
+                className={`${
+                  p === currentPage ? 'bg-[#F3666D]' : 'bg-red-50'
+                } relative z-10 inline-flex items-center border border-[#ED1A25] px-4 py-2 text-sm font-medium text-red-600 focus:z-20`}
               >
                 {p}
               </button>
@@ -101,7 +97,6 @@ const Pagination = ({
               className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
             >
               <span className="sr-only">Next</span>
-              {/*<!-- Heroicon name: mini/chevron-right -->*/}
               <svg
                 className="h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"

@@ -99,7 +99,7 @@ const Home = () => {
               />
             ))
           ) : (
-            <p>No results!</p>
+            <p className="text-lg">No results!</p>
           )}
         </div>
 

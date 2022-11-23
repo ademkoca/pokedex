@@ -41,40 +41,6 @@ const Login = () => {
       });
       window.location.href = '/';
     } else alert('You must accept terms of service');
-    // if (user.username !== '' && user.password !== '') {
-    //   const userToSend = {
-    //     username: user.username,
-    //     password: user.password,
-    //     email: user.email,
-    //   };
-    //   try {
-    //     const res = await axios.post(
-    //       'http://localhost:8800/backend/auth/login',
-    //       userToSend
-    //     );
-    //     if (res.status === 200) {
-    //       // console.log(res.data);
-    //       loginUser({
-    //         username: res.data.username,
-    //         _id: res.data._id,
-    //         isAdmin: res.data.isAdmin,
-    //         // wishlist: res.data.wishlist,
-    //       });
-    //       window.location.href = '/';
-    //     } else {
-    //       if (res.status === 404) {
-    //         // console.log(res.data);
-    //       }
-    //     }
-    //     // window.location.href = '/';
-    //     // history.push('/login');
-    //   } catch (err) {
-    //     console.log(typeof err.response.data);
-    //     // setErrorMsg(err.response.data);
-    //     // // console.log(errorMsg);
-    //     // setErrorMsgShow(true);
-    //   }
-    // }
   };
   return (
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -95,29 +61,6 @@ const Login = () => {
           {step === 2 && <Step2 user={user} setUser={setUser} />}
           {step === 3 && <Step3 user={user} setUser={setUser} />}
 
-          {/* <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-              />
-              <label for="remember-me" className="ml-2 block text-sm text-gray-900">
-                Remember me
-              </label>
-            </div>
-
-            <div className="text-sm">
-              <a
-                href="#"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Forgot your password?
-              </a>
-            </div>
-          </div> */}
-
           <div>
             <button
               onClick={(e) =>
@@ -129,9 +72,7 @@ const Login = () => {
               }
               className="group relative flex w-full justify-center rounded-md border border-transparent bg-[#ED1A25] py-2 px-4 text-sm font-medium text-white hover:bg-[#F3666D] focus:outline-none focus:ring-2 focus:ring-[#ED1A25] focus:ring-offset-2"
             >
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                {/*<!-- Heroicon name: mini/lock-closed -->*/}
-              </span>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3"></span>
               {step < 3 ? 'Next' : 'Finish'}
             </button>
           </div>

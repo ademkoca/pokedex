@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 
 const SearchBar = ({ setSearchResult, searchResult, setNoResults }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  //   console.log(searchQuery);
+
   const getSearchResult = async (query) => {
     const res = await axios.get(
       'https://pokeapi.co/api/v2/pokemon/?limit=1300'
     );
-    // console.log(res.data);
+    
 
     setSearchResult(
       res.data.results.filter((p) =>
@@ -22,7 +22,6 @@ const SearchBar = ({ setSearchResult, searchResult, setNoResults }) => {
   };
   const handleSearch = (e) => {
     e.preventDefault();
-    // setQuery(searchQuery);
     getSearchResult(searchQuery);
   };
   return (

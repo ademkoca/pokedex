@@ -16,13 +16,6 @@ const Navbar = () => {
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              {/* <Link to="/">
-                <img
-                  className="block h-8 w-auto lg:hidden"
-                  src="/pokemon-logo.png"
-                  alt="Your Company"
-                />
-              </Link> */}
               <a href="/">
                 <img
                   className="h-8 w-auto block"
@@ -33,19 +26,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* <!-- Profile dropdown --> */}
             <div className="relative ml-3 md:ml-0">
               <div className="flex">
-                {/* <img
-                  className="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                /> */}
-                {/* <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
-                  <span class="font-medium text-gray-600 dark:text-gray-300">
-                    JL
-                  </span>
-                </div> */}
                 {Object.keys(user).length > 0 ? (
                   <button
                     onClick={handleSignout}
@@ -69,8 +51,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* <!-- Mobile menu, show/hide based on menu state. --> */}
     </nav>
   );
 };
